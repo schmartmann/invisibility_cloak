@@ -1,0 +1,11 @@
+{
+  "name": "invisibility_cloak",
+  "version": "1.0.0",
+  "description": "web interface to hide html tags from text",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
