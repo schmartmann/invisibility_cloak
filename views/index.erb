@@ -1,0 +1,17 @@
+  <% @translation.each do |line| %>
+  <div class="excel-row">
+  <ul>
+    <% if line.category == 'Row Header' %>
+      <hr/>
+    <%# elsif line.content == "&nbsp;"%>
+      <br/>
+    <% elsif line.category == 'Row Desc' %>
+      <xmp class="code"><%= line.content %></xmp>
+    <% elsif line.category == 'HTML' %>
+      <xmp class="code"><%=line.content%></xmp>
+    <% else %>
+      <p><%= line.content %>
+      <% end %>
+    </ul>
+  </div>
+    <%end%>

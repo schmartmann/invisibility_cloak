@@ -1,11 +1,16 @@
-.main-container {
-  width: 980px;
-  margin: 0 auto;
+.excel-row {
+  display: inline;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
+nav {
+  display: inline;
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  position: fixed;
+  background: rgba(204, 204, 204, 0.5);
 }
 
-.center-block { float: none }
+.container {
+  margin: 10px 50px;
+}

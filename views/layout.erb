@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>HTML Text Cloak</h1>
+    <nav>
+        <form>
+          <input id="hide" type="radio" name="hide" value="hide" checked> Hide HTML<br>
+          <input id="show" type="radio" name="show" value="show"> Show HTML<br>
+        </form>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+</body>
+</html>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/script.js" type="text/javascript"></script>
