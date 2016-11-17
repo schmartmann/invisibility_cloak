@@ -3,7 +3,7 @@
   <ul>
     <% if line.category == 'Row Header' %>
       <hr/>
-    <%# elsif line.content == "&nbsp;"%>
+      <%= line.content %>
       <br/>
     <% elsif line.category == 'Row Desc' %>
       <xmp class="code"><%= line.content %></xmp>

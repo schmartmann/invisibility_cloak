@@ -2,7 +2,7 @@ require 'zlib'
 
 
 configure :production, :development do
-	db = URI.parse('postgres://dasboogaloo@localhost:5432/invisibility_cloak_db')
+	db = URI.parse(ENV['DATABASE_URL'] || 'postgres://dasboogaloo@localhost:5432/invisibility_cloak_db')
 
 	ActiveRecord::Base.establish_connection(
 			:adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,

@@ -4,8 +4,8 @@
 
 nav {
   display: inline;
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 160px;
   border: 1px solid black;
   position: fixed;
   background: rgba(204, 204, 204, 0.5);
