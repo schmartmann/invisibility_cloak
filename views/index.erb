@@ -1,17 +1,12 @@
   <% @translation.each do |line| %>
   <div class="excel-row">
-  <ul>
     <% if line.category == 'Row Header' %>
       <hr/>
       <div class="row-number"><%= line.content %></div>
-      <br/>
-    <% elsif line.category == 'Row Desc' %>
-      <xmp class="code"><%= line.content %></xmp>
-    <% elsif line.category == 'HTML' %>
-      <xmp class="code"><%=line.content%></xmp>
+    <% elsif line.category != 'Copy' %>
+      <xmp class="code text"><%= line.content %></xmp>
     <% else %>
-      <p><%= line.content %>
-      <% end %>
-    </ul>
+      <p class="text"><%= line.content %></p>
+    <% end %>
   </div>
     <%end%>

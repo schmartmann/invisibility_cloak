@@ -12,9 +12,13 @@ nav {
 }
 
 .container {
-  margin: 10px 100px;
+  margin: 10px 120px;
 }
 
 .row-number {
-  background: grey; 
+  background: grey;
+}
+
+.text {
+  display: inline;
 }
