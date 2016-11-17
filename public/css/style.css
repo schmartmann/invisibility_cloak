@@ -4,13 +4,13 @@
 
 nav {
   display: inline;
-  width: 200px;
-  height: 160px;
+  width: 112px;
+  height: 100px;
   border: 1px solid black;
   position: fixed;
   background: rgba(204, 204, 204, 0.5);
 }
 
 .container {
-  margin: 10px 50px;
+  margin: 10px 100px;
 }
