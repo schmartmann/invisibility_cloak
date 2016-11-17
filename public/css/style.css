@@ -14,3 +14,7 @@ nav {
 .container {
   margin: 10px 100px;
 }
+
+.row-number {
+  background: grey; 
+}
