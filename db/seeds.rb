@@ -22,8 +22,11 @@ sheet.each(id: 'id', raw_text: 'en-US') do |hash|
   )
 end
 
-translation.each_with_index do |row, index|
-  Translation.create({
-    
-    })
+translation.each do |row|
+  Translation.create([
+    {
+      content:row[:raw_text],
+      category: row[:id]
+    }
+  ])
 end
