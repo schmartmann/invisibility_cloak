@@ -1,12 +1,15 @@
-  <% @translation.each do |line| %>
-  <div class="excel-row">
-    <% if line.category == 'Row Header' %>
-      <hr/>
-      <div class="row-number"><%= line.content %></div>
-    <% elsif line.category != 'Copy' %>
-      <xmp class="code text"><%= line.content %></xmp>
-    <% else %>
-      <p class="text"><%= line.content %></p>
-    <% end %>
-  </div>
-    <%end%>
+<div class="excel-row">
+  <% @translation.each_with_index do |line, index| %>
+        <hr/>
+          <div class="row-number">
+            <%= "Row #{index + 1}" %>
+          </div>
+      <% line[:content].each do |word| %>
+        <% if word.match(@regex)%>
+          <xmp class="code text"><%= word %></xmp>
+        <% else %>
+          <p class="text"><%= word %></p>
+        <% end %>
+      <% end %>
+  <% end %>
+<hr/>
