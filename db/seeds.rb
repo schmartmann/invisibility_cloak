@@ -10,7 +10,7 @@ def html_breaker(html)
   @text_arr = html.split(regex)
 end
 
-xlsx = Roo::Spreadsheet.open('/Users/dasboogaloo/Downloads/2016NonUSNonMgmtCriterionSurvey_SupervsrTranslations_toDLS_5.10.16.xlsx')
+xlsx = Roo::Spreadsheet.open('./2016NonUSNonMgmtCriterionSurvey_SupervsrTranslations_toDLS_5.10.16.xlsx')
 sheet = xlsx.sheet('Questions')
 translation = []
 sheet.each(id: 'id', raw_text: 'en-US') do |hash|
