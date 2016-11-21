@@ -7,6 +7,8 @@
       <% line[:content].each do |word| %>
         <% if word.match(@regex)%>
           <xmp class="code text"><%= word %></xmp>
+        <% elsif word.start_with?("%") && word.end_with?("%") %>
+          <xmp class="code text"><%= word %></xmp>
         <% else %>
           <p class="text"><%= word %></p>
         <% end %>
