@@ -18,7 +18,7 @@ module Sinatra
         @text_arr = html.split(@regex)
       end
 
-      translation = Translation.all
+      translation = Translation.all.limit(25)
 
       # translation = [
       #   {
