@@ -2,7 +2,7 @@
   <% @translation.each_with_index do |line, index| %>
         <hr/>
           <div class="row-number">
-            <%= "Row #{index + 1}" %>
+            <%= "Row #{index + 2}" %>
           </div>
       <% line[:content].each do |word| %>
         <% if word.match(@regex)%>
