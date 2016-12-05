@@ -1,9 +1,15 @@
 <div class="excel-row">
   <% @translation.each_with_index do |line, index| %>
         <hr/>
-          <div class="row-number">
-            <%= "Row #{index + 2}" %>
-          </div>
+        <% if index == 0 %>
+            <div class="row-number">
+              Header
+            </div>
+          <% else %>
+            <div class="row-number">
+              <%= "Row #{index}" %>
+            </div>
+          <% end %>
       <% line[:content].each do |word| %>
         <% if word.match(@regex)%>
           <xmp class="code text"><%= word %></xmp>
