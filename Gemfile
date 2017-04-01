@@ -11,4 +11,5 @@ gem 'pg'
 gem "byebug"
 gem "rubyXL"
 gem 'roo', '~> 2.5.0'
+gem 'roo-xls'
 # gem "rails"

@@ -1,6 +1,7 @@
 require 'roo'
+require 'roo-xls'
 
-Translation.delete_all;
+Translation.destroy_all;
 
 def html_breaker(html)
   tagsRegExp = /(<\/?\w+(?:(?:\s+\w+(?:\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>)/
@@ -11,19 +12,22 @@ def html_breaker(html)
 end
 
 # xlsx = Roo::Spreadsheet.open('./2016NonUSNonMgmtCriterionSurvey_SupervsrTranslations_toDLS_5.10.16.xlsx')
-xlsx = Roo::Spreadsheet.open('./Sample_translation_content.xlsx')
-sheet = xlsx.sheet('Questions')
+# xlsx = Roo::Spreadsheet.open('./GRS_Correspondence_translation_spreadsheet_Languages_4.xlsx')
+xlsx = Roo::Spreadsheet.open('./Textool_Update_April_May_Projects_03312017.xlsx');
+sheet = xlsx.sheet('Corr Templates').column(12)
+
 translation = []
-sheet.each(id: 'id', raw_text: 'en-US') do |hash|
+sheet.each_with_index do |hash, index|
   translation.push(
     {
-      id:hash[:id],
-      raw_text: hash[:raw_text]
+      id: index,
+      raw_text: hash
     }
   )
 end
 
 translation.each do |row|
+  byebug
   Translation.create([
     {
       content:row[:raw_text],

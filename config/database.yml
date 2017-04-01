@@ -1,8 +1,8 @@
 development:
   adapter: postgresql
   database: invisibility_cloak_db
-  username: ENV["USER_NAME"]
-  password: ENV["USER_PASS"]
+  username: 'dasboogaloo'
+  password: 'nra4ever'
   host: localhost
 
 production:
