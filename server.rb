@@ -28,7 +28,6 @@ module Sinatra
           }
         )
       end
-      byebug
       erb :index
     end
   end
